@@ -1,19 +1,14 @@
 syntax on
-set dir=~/tmp	
+set dir=~/.tmp	
 set mouse=a
 set expandtab
 set shiftwidth=2
 set tabstop=2
 filetype plugin indent on
 
-			
-
 execute pathogen#infect()
-set background=dark
-colorscheme molokai
+colorscheme softlight
 set rtp+=$GOROOT/misc/vim
-
-highlight Normal ctermfg=grey ctermbg=gray
 
 call vundle#begin()
 
@@ -21,12 +16,18 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'Lokaltog/vim-powerline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+
+" navigating tabs with cntrl <- ->
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-n> :NERDTree<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 

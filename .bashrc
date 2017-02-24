@@ -1,5 +1,19 @@
 # .bashrc
 
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+
+
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
 #colors
 
 #Colored ManPages
@@ -24,38 +38,32 @@ export GREP_COLOR=32
 alias grep='grep --color'
 alias egrep='egrep --color'
 
+#dnf shorcuts
 
+function di {
+   sudo dnf install $1 $2 $3
+}
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
-
-#docker useful shorcut 
+#docker useful shorcut
 alias docker_clean='sudo docker rm $(sudo docker ps --filter=status=exited --filter=status=created -q)'
 
 #node6
-export PATH=$PATH:/home/cesar/Documentos/bin/node-v6/bin
+export PATH=$PATH:/home/cesar/Documentos/node-v7/bin
 
 function toby {
-  sudo docker exec -i -t $1 bash 
+  sudo docker exec -i -t $1 bash
 }
 
 function toby_run {
-  sudo docker exec -i -t $1 $2 
+  sudo docker exec -i -t $1 $2
 }
 
 function toby_stop {
-  sudo docker stop $1 
+  sudo docker stop $1
 }
 
 function toby_isolate {
-  sudo docker rm $1 
+  sudo docker rm $1
   sudo docker run -i -d -v $(pwd):/usr/src/app --name $1 amp bash
 }
 
@@ -66,4 +74,3 @@ function toby_ls {
 function toby_inspect {
   sudo docker inspect $1
 }
-

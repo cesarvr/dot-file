@@ -7,6 +7,10 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #creating temporary directory
 mkdir ~/.tmp
 
+#YouCompleteMe vim plugin 
+git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe
+python ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
+
 #install dot-vim 
 cp .vimrc ~/.vimrc 
 vim -c ":PluginInstall"

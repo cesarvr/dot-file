@@ -9,7 +9,7 @@ mkdir ~/.tmp
 
 #YouCompleteMe vim plugin 
 git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe
-python ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
+python ~/.vim/bundle/YouCompleteMe/install.py --clang-completer --system-libclang  
 
 #install dot-vim 
 cp .vimrc ~/.vimrc 

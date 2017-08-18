@@ -1,0 +1,1 @@
+objdump -f libfoo.a # shows ELF Header

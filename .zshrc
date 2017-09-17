@@ -7,7 +7,7 @@ export ZSH=/home/cesar/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="refined"
+ZSH_THEME="lambda"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -87,4 +87,6 @@ source $ZSH/oh-my-zsh.sh
 alias ds="sudo dnf search"
 alias di="sudo dnf install"
 alias gogh="wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh"
-
+alias rst="source ~/.zshrc"
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'

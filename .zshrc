@@ -90,3 +90,23 @@ alias gogh="wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm g
 alias rst="source ~/.zshrc"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+
+function status {
+
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+
+NC='\033[0m' # No Color
+
+echo ""
+if [ ! -f  /lib/systemd/system-sleep/alienware_pci_rescan.sh ]; then 
+	echo "wifi/wake up ${RED}fail${NC}" 
+else
+	echo "wifi/wake up ${GREEN}ok${NC}" 
+fi
+echo ""
+}
+
+
+

@@ -2,9 +2,13 @@
 
 #installing theme
 
-wget https://dl.opendesktop.org/api/files/download/id/1505361900/Ant-Dracula.tar.xz
-wget https://dl.opendesktop.org/api/files/download/id/1505361886/Ant.tar.xz
-wget https://dl.opendesktop.org/api/files/download/id/1505361895/Ant-Bloody.tar.xz 
+wget https://dl.opendesktop.org/api/files/download/id/1506053162/Ant-Dracula.tar.xz
+
+wget https://dl.opendesktop.org/api/files/download/id/1506053152/Ant.tar.xz
+
+wget https://dl.opendesktop.org/api/files/download/id/1506053156/Ant-Bloody.tar.xz
+
+
 wget https://dl.opendesktop.org/api/files/download/id/1505352553/Deepin.zip
 
 mkdir -p $HOME/.themes/

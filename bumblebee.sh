@@ -7,4 +7,4 @@ sudo dnf -y --nogpgcheck install http://install.linux.ncsu.edu/pub/yum/itecs/pub
 
 
 #install bumblebee-nvidia
-bumblebee-nvidia bbswitch-dkms VirtualGL.x86_64 VirtualGL.i686 primus.x86_64 primus.i686 kernel-devel
+sudo dnf install bumblebee-nvidia bbswitch-dkms VirtualGL.x86_64 VirtualGL.i686 primus.x86_64 primus.i686 kernel-devel

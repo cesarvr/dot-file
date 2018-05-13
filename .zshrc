@@ -7,7 +7,7 @@ export ZSH=/home/cesar/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="lambda"
+ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -100,13 +100,10 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 echo ""
-if [ ! -f  /lib/systemd/system-sleep/alienware_pci_rescan.sh ]; then 
-	echo "wifi/wake up ${RED}fail${NC}" 
+if [ ! -f  /lib/systemd/system-sleep/alienware_pci_rescan.sh ]; then
+	echo "wifi/wake up ${RED}fail${NC}"
 else
-	echo "wifi/wake up ${GREEN}ok${NC}" 
+	echo "wifi/wake up ${GREEN}ok${NC}"
 fi
 echo ""
 }
-
-
-

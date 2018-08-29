@@ -90,6 +90,7 @@ alias gogh="wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm g
 alias rst="source ~/.zshrc"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias update_me='curl https://raw.githubusercontent.com/cesarvr/dot-file/master/.zshrc -o ~/.zshrc'
 
 source ~/.tools/theme.sh
 

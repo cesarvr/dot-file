@@ -4,6 +4,7 @@ set mouse=a
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set path+=**
 filetype plugin indent on
 
 execute pathogen#infect()
@@ -40,18 +41,4 @@ nnoremap <A-Right> :normal <c-r>=SwitchWindow('>')<CR><CR>
 map <c-f> :call JsBeautify()<cr> 
 map <c-t> :tabedit<cr>
 
-function! SwitchWindow(dir)
-    let this = winnr()
- 	if '+' == a:dir
-	    execute "normal \<c-w>k"
-	elseif '-' == a:dir
-		execute "normal \<c-w>j"
-	elseif '>' == a:dir
-     	execute "normal \<c-w>l"
-    elseif '<' == a:dir
-        execute "normal \<c-w>h"
-    else
-	    echo "oops. check your ~/.vimrc"
-        return ""
-  	endif
-endfunction
+

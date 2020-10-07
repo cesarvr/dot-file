@@ -1,15 +1,24 @@
 syntax on
 set dir=~/.tmp	
+set path+=**
+set wildmenu
+set backupdir=~/.vimtmp//,.
+set directory=~/.vimtmp//,.
 set mouse=a
 set expandtab
-set shiftwidth=2
-set tabstop=2
+
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+set shiftwidth=4    " Indents will have a width of 4
+set softtabstop=4   " Sets the number of columns for a TAB
+set expandtab       " Expand TABs to spaces
+
 filetype plugin indent on
 
-execute pathogen#infect()
-colorscheme softlight
 set rtp+=$GOROOT/misc/vim
-
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'pangloss/vim-javascript'
@@ -23,20 +32,8 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+colorscheme satori
 
-" navigating tabs with cntrl <- ->
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
-
-" Switch window mappings /*{{{*/
-nnoremap <A-Up> :normal <c-r>=SwitchWindow('+')<CR><CR>
-nnoremap <A-Down> :normal <c-r>=SwitchWindow('-')<CR><CR>
-nnoremap <A-Left> :normal <c-r>=SwitchWindow('<')<CR><CR>
-nnoremap <A-Right> :normal <c-r>=SwitchWindow('>')<CR><CR>
- 
 map <c-f> :call JsBeautify()<cr> 
 map <c-t> :tabedit<cr>
 
